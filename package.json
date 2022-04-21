@@ -1,19 +1,28 @@
 {
   "name": "jason-loadmore",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "engines": {
     "node": ">8.0.0"
   },
   "author": "jasonlzy",
   "scripts": {
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
   },
   "peerDependencies": {
-    "react": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0"
+    "react": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
@@ -21,5 +30,8 @@
     "@vitejs/plugin-react": "^1.3.0",
     "typescript": "^4.6.3",
     "vite": "^2.9.5"
+  },
+  "dependencies": {
+    "intersection-observer": "^0.12.0"
   }
 }
