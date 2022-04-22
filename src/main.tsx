@@ -9,9 +9,18 @@ export interface LoadMoreProps {
   handleIntersectionObserver?: IntersectionObserverCallback;
   Options?: IntersectionObserverInit | undefined
   containerProps?: any
+  LoadingComponent?: FC<any>
 }
 
-export const LoadMore: FC<LoadMoreProps>= ({ children, ref ,loadMore, handleIntersectionObserver, Options, containerProps = {}}) => {
+export const LoadMore: FC<LoadMoreProps> = (
+  { 
+    children, 
+    ref,
+    loadMore, 
+    handleIntersectionObserver, 
+    Options, 
+    LoadingComponent,
+    containerProps = {}}) => {
   
   const defaultHandleIntersectionObserver = (entries: IntersectionObserverEntry[]) => {
     entries.forEach(entry => {
@@ -30,5 +39,5 @@ export const LoadMore: FC<LoadMoreProps>= ({ children, ref ,loadMore, handleInte
     }
   }, [Options])
   
-  return injectLoadMore(children, containerProps)
+  return injectLoadMore(children, containerProps, LoadingComponent)
 }

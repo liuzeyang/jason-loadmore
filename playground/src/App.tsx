@@ -7,9 +7,12 @@ function App() {
 
   return (
     <div className="App">
-      <LoadMore loadMore={(entry) => {
-        console.log(entry)
-      }}>
+      <LoadMore 
+        loadMore={(entry) => {
+          console.log(entry)
+        }}
+        LoadingComponent={() => <div>Loading...</div>}
+      >
         <div id='container'>
         {
           new Array(100).fill(0).map((_, i) => {
