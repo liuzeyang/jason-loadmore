@@ -7,7 +7,7 @@
   },
   "author": "jasonlzy",
   "scripts": {
-    "build": "tsc && vite build"
+    "build": "vite build && tsc"
   },
   "files": [
     "dist"
@@ -20,7 +20,6 @@
       "require": "./dist/jason-loadmore.umd.js"
     }
   },
-  "types": "./types/index.d.ts",
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0"
   },
