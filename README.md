@@ -25,4 +25,3 @@ pnpm install --save jason-loadmore
 
 | 参数 | 说明 | 类型 | 默认值 |
 | ---- | ---- | ---- | ---- |
-

@@ -1,6 +1,6 @@
 {
   "name": "jason-loadmore",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "engines": {
     "node": ">8.0.0"
@@ -12,14 +12,15 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
+  "main": "./dist/jason-loadmore.umd.js",
+  "module": "./dist/jason-loadmore.es.js",
   "exports": {
     ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
+      "import": "./dist/jason-loadmore.es.js",
+      "require": "./dist/jason-loadmore.umd.js"
     }
   },
+  "types": "./types/index.d.ts",
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0"
   },
