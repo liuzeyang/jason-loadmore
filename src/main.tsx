@@ -28,7 +28,7 @@ export const LoadMore: FC<LoadMoreProps>= ({ children, ref ,loadMore, handleInte
     return () => {
       intersectionObserver.disconnect()
     }
-  }, [])
+  }, [Options])
   
   return injectLoadMore(children, containerProps)
 }
